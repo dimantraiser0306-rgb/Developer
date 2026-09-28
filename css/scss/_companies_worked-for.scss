@@ -1,0 +1,76 @@
+.main{
+    margin: 0 auto;
+    background-color: #000;
+    display: flex;
+    max-width: 1441px;   
+    justify-content: center;
+    color: #fff;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1294px;
+    margin: 0 auto;
+    
+}
+.main__title{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    gap: 8px;
+    max-width: 790px;
+    margin-bottom: 40px;
+    max-width: 690px;
+        p {
+                width: 156px;
+                color: var(--light-gray);
+            }
+}
+
+.companies__worked-for {
+   display: flex;
+   justify-content: space-between;
+   gap: 24px;
+   margin-bottom: 119px;
+   box-sizing: border-box;
+   opacity: 0;
+   transform: translateX(-800px);
+   transition: opacity 1s ease-in-out, ; 
+        dt{
+            font-size: 117px;
+            color: var(--light-gray);
+            
+        }
+        dd{
+            font-size: 24px;
+            max-width: 368px;            
+        }
+}
+
+.google{
+    color: #3CC74E;
+}
+.facebook{
+    color: #609BFF;
+}
+.driabbble{
+    color: #E95D90;
+}
+.paragraph{
+    font-size: 16px;
+    color: var(--light-gray);
+}
+
+@media(max-width: 1200px){
+    .main{
+        padding: 0 20px;
+    }
+}
+
+
+
+.show{
+    transform: translateX(0);
+    opacity: 1;
+}

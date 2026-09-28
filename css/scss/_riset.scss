@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Sen", sans-serif 
+}
+a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    transition: color .5s;
+    
+}
+
+
+
+a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    transition: tranform(.5s);
+    &:hover{
+        color: var(--purpure);
+    }
+}
+
+p{
+    font-size: 18px;
+    font-width: 400;
+    line-height: 1.5;
+}
+
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+ul{
+    list-style-type: none;
+}
+
+h1 {   
+    font-size: 78px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 55px;
+    font-weight: 700
+}
+h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(0,0,0,.6);
+    z-index: 9;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+.overlay_turnOn{
+    visibility: visible;
+    opacity: 1;
+}

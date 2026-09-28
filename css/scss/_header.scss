@@ -1,0 +1,254 @@
+.header{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    background-color: #000;
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+
+}
+
+.header__top{
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    height: auto;
+    padding: 0 40px;
+    
+    .logo{
+        max-width: 77.5px;
+            img{
+                display: block;
+            }
+    }
+    
+}
+
+.menu{
+    display: flex;
+    padding: 0 72px;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.menu ul{
+    display: flex;
+    gap: 48px;
+}
+
+.colored{
+    padding: 32px 24px;
+    background-color: var(--purpure)
+}
+
+.two__coresontal-blocks {
+    display: flex;
+        
+}
+
+.header__main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    position: relative;
+}
+.block__img {   
+    position: absolute;
+    z-index: 1;
+    top: 166px;
+    left: 0;
+        img{
+
+            max-width: 750px;
+            width: 100%;
+        }
+}
+
+.block__right{
+    background-color: var(--dark-purpure);
+    width: 900px;
+    position: relative;
+    margin-left: auto;
+}
+.header__title {
+    z-index: 9;
+    position: absolute;
+    max-width: 740px;
+    right: 0;
+    color: #fff;
+    transform: translateY(calc(50% + 90px));
+    right: 38px;
+    gap: 32px;
+}
+
+
+
+.header__link{
+    &:hover {
+        color: rgb(88, 85, 85);
+        }
+}
+
+
+
+.planshet__img{
+    display: none;
+}
+.phone__img{
+    display: none;
+}
+
+.menu__button{
+    display: none;
+    z-index: 200;
+    position: absolute;
+    flex-direction: column;
+    max-width: 50px;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    top: 0;
+    padding: 15px;  
+        span{
+            background-color: var(--purpure);
+            width: 100%;
+            height: 2px;
+        }
+}
+
+.pc__img{
+    width: 730px;
+    height: 730px;
+    border-radius: 20px 400px 20px 400px;
+    margin-left: 20px;
+    opacity: 0;
+    transition: all 1s ease-in;
+    
+    border: 3px solid rgb(88, 85, 85)
+}
+
+.turn_on{
+    transform: translateX(0) !important;
+}
+
+@media(max-width: 1000px){
+    .header__title{
+        h1{
+            font-size: 56px;          
+        }
+    }
+    .pc__img {
+        display: none;
+    }
+    .planshet__img{
+        display: flex;      
+        max-width: 384px;
+        width: 100%;
+        height: auto;
+       
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .menu{
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        background-color: rgba(24, 24, 35, .7);
+        max-width: 300px;
+        padding: 70px 10px 10px 10px;
+        backdrop-filter: blur(10px);
+        box-sizing: border-box;
+        border-radius: 10px;
+        transform: translateX(-100%);
+        transition: transform .6s ease-in-out;
+        
+            ul{
+                display: flex;
+                flex-direction: column;
+            }
+            a{
+                font-size: 45px;
+            }
+    }
+    .menu__button{
+        display: flex;
+    }
+
+    
+}
+
+@media(max-width: 768px){
+    .block__right{
+        background-color: #000;;
+    }
+    .main__title{
+            h2{
+                max-width: 688px;
+            }
+    }
+}
+
+@media(max-width:400px){
+    .planshet__img{
+        display: none;
+    }
+    .block__img{
+        top: 60px;
+    }
+    .phone__img{
+        display: block;
+        max-width: 360px;
+    }
+    .header__title{
+        position:relative;
+        h1{
+            font-size: 32px;
+            max-width: 320px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        p{
+            margin: 0 auto;
+        }
+    }
+    .header__main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .companies__worked-for{
+        flex-direction: column;
+        opacity: 0;
+    
+    }
+    
+}
+
+// анимация
+
+.hidden__left{
+    opacity: 0;
+    transition: all 1s ease-out;
+    transform: translateX(-800px)
+}
+
+.show{
+    transform: translate(0);
+    opacity: 1;
+}
+
