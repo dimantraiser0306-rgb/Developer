@@ -242,5 +242,3 @@ const observeWorkBlock2TopRight = new IntersectionObserver(
 for (const i of [...workBlock2TopRight, ...workBlock2BottomRight]) {
   observeWorkBlock2TopRight.observe(i);
 }
-
-for
