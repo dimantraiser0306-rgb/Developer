@@ -209,11 +209,8 @@ const observeWrokBlock1BottomLeft = new IntersectionObserver(
   (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.toggle(
-          "work__block-show",
-          entry.isIntersecting,
-          observer.unobserve(entry.target),
-        );
+        entry.target.classList.toggle("work__block-show", entry.isIntersecting);
+        observer.unobserve(entry.target);
       }
     });
   },
