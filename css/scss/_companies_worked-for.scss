@@ -35,7 +35,6 @@
    margin-bottom: 119px;
    box-sizing: border-box;
    opacity: 0;
-   transform: translateX(-800px);
    transition: opacity 1s ease-in-out, ; 
         dt{
             font-size: 117px;
@@ -62,6 +61,11 @@
     color: var(--light-gray);
 }
 
+.show{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 @media(max-width: 1200px){
     .main{
         padding: 0 20px;
@@ -70,7 +74,3 @@
 
 
 
-.show{
-    transform: translateX(0);
-    opacity: 1;
-}

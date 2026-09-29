@@ -8,7 +8,7 @@
     max-width: 1440px;
     width: 100%;
     display: flex;
-    
+    padding: 0 10px;
     justify-content: space-between;
     align-items: center;
 }
@@ -23,7 +23,6 @@
     width: 100%;
     gap: 24px;
     text-align: left;
-    
         a{
             margin-top: auto;
             color: var(--dark-purpure);
@@ -38,25 +37,13 @@
     flex-basis: 50%;
     max-width: 600px;
     width: 100%;
+    background-repeat: no-repeat;
         img{
            max-width: 600px;
            width: 100%;
         }
 }
-.ball__planshet{
-    display: none;
-}
-
-@media(max-width:768px){
-    .ball{
-        display: none;
-    }
-    .ball__planshet{
-        display: block;
-    }
-}
 @media(max-width: 400px){
-
         .philosophy_blocks{
         flex-direction: column; 
     }

@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Sen", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -92,13 +93,12 @@ h3 {
 }
 
 .header {
+  margin: 0 auto;
   position: relative;
   display: flex;
-  margin: 0 auto;
   background-color: #000;
-  width: 100%;
   max-width: 1440px;
-  height: auto;
+  width: 100%;
 }
 
 .header__top {
@@ -112,7 +112,7 @@ h3 {
   justify-content: space-between;
   position: absolute;
   height: auto;
-  padding: 0 40px;
+  padding: 10px;
 }
 .header__top .logo {
   max-width: 77.5px;
@@ -122,6 +122,7 @@ h3 {
 }
 
 .menu {
+  opacity: 0;
   display: flex;
   padding: 0 72px;
   justify-content: space-between;
@@ -154,6 +155,7 @@ h3 {
 }
 
 .block__img {
+  display: block;
   position: absolute;
   z-index: 1;
   top: 166px;
@@ -162,6 +164,7 @@ h3 {
 .block__img img {
   max-width: 750px;
   width: 100%;
+  height: 100%;
 }
 
 .block__right {
@@ -213,25 +216,37 @@ h3 {
 }
 
 .pc__img {
-  width: 730px;
-  height: 730px;
-  border-radius: 20px 400px 20px 400px;
-  margin-left: 20px;
+  box-sizing: border-box;
+  max-width: 730px;
+  width: 100%;
+  height: 100%;
+  max-height: 730px;
+  border-radius: 20% 50% 20% 50%;
+  margin: 0 20px;
   opacity: 0;
   transition: all 1s ease-in;
   border: 3px solid rgb(88, 85, 85);
 }
 
 .turn_on {
+  opacity: 1;
   transform: translateX(0) !important;
+}
+
+.hidden__left {
+  opacity: 0;
+  transition: all 1s ease-out;
+  transform: translateX(100%);
+}
+
+.show {
+  transform: translate(0);
+  opacity: 1;
 }
 
 @media (max-width: 1000px) {
   .header__title h1 {
     font-size: 56px;
-  }
-  .pc__img {
-    display: none;
   }
   .planshet__img {
     display: flex;
@@ -277,6 +292,9 @@ h3 {
   }
 }
 @media (max-width: 400px) {
+  .header__main {
+    height: 500px;
+  }
   .planshet__img {
     display: none;
   }
@@ -288,10 +306,10 @@ h3 {
     max-width: 360px;
   }
   .header__title {
-    position: relative;
+    padding: 0 20px;
   }
   .header__title h1 {
-    font-size: 32px;
+    font-size: 22px;
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
@@ -308,17 +326,6 @@ h3 {
     opacity: 0;
   }
 }
-.hidden__left {
-  opacity: 0;
-  transition: all 1s ease-out;
-  transform: translateX(-800px);
-}
-
-.show {
-  transform: translate(0);
-  opacity: 1;
-}
-
 .main {
   margin: 0 auto;
   background-color: #000;
@@ -356,7 +363,6 @@ h3 {
   margin-bottom: 119px;
   box-sizing: border-box;
   opacity: 0;
-  transform: translateX(-800px);
   transition: opacity 1s ease-in-out;
 }
 .companies__worked-for dt {
@@ -385,16 +391,16 @@ h3 {
   color: var(--light-gray);
 }
 
-@media (max-width: 1200px) {
-  .main {
-    padding: 0 20px;
-  }
-}
 .show {
   transform: translateX(0);
   opacity: 1;
 }
 
+@media (max-width: 1200px) {
+  .main {
+    padding: 0 20px;
+  }
+}
 .philosophy {
   margin: 0 auto;
   max-width: 1440px;
@@ -406,6 +412,7 @@ h3 {
   max-width: 1440px;
   width: 100%;
   display: flex;
+  padding: 0 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -434,24 +441,13 @@ h3 {
   flex-basis: 50%;
   max-width: 600px;
   width: 100%;
+  background-repeat: no-repeat;
 }
 .philosophy_block2 img {
   max-width: 600px;
   width: 100%;
 }
 
-.ball__planshet {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .ball {
-    display: none;
-  }
-  .ball__planshet {
-    display: block;
-  }
-}
 @media (max-width: 400px) {
   .philosophy_blocks {
     flex-direction: column;
@@ -605,16 +601,20 @@ h3 {
 .work__wrap {
   display: flex;
   margin-top: 120px;
+  padding: 10px;
   gap: 24px;
   justify-content: center;
 }
 
 .work__title {
-  margin-bottom: 80px;
+  margin-bottom: clamp(1px, 2.5vw, 80px);
   max-width: 572px;
   width: 100%;
   gap: 8px;
   background-color: inherit;
+}
+.work__title h2 {
+  font-size: clamp(22px, 2.5vw, 55px);
 }
 
 .column1,
@@ -707,8 +707,6 @@ h3 {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  max-width: 1440px;
-  width: 100%;
   justify-content: space-between;
 }
 .instagram__wrap .instagram__block-left {
@@ -719,7 +717,9 @@ h3 {
   justify-content: space-between;
   max-width: 576px;
   width: 100%;
-  padding: 120px 24px;
+}
+.instagram__wrap .instagram__block-left h2 {
+  font-size: clamp(20px, 2.5vw, 55px);
 }
 .instagram__wrap .instagram__block-left p {
   color: var(--dark-gray);
@@ -739,24 +739,9 @@ h3 {
   display: block;
   max-width: 720px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  padding: 10px;
 }
 
-.ins__foto-planshet {
-  visibility: hidden;
-  display: none !important;
-}
-
-@media (max-width: 768px) {
-  .ins__foto {
-    visibility: hidden;
-  }
-  .ins__foto-planshet {
-    visibility: visible;
-    display: block !important;
-  }
-}
 @media (max-width: 500px) {
   .instagram__wrap {
     flex-direction: column;
@@ -764,7 +749,6 @@ h3 {
     justify-content: center;
   }
   .instagram__block-left {
-    padding: 0 30px;
     box-sizing: border-box;
   }
 }
@@ -789,6 +773,7 @@ h3 {
 }
 .dribbble__wrap h2 {
   margin-top: 120px;
+  font-size: clamp(20px, 2.5vw, 55px);
 }
 .dribbble__wrap p {
   margin-bottom: 17px;
@@ -808,6 +793,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 23px;
+  padding: 10px;
 }
 
 .dribbble__img {
@@ -846,6 +832,7 @@ h3 {
   display: flex;
   gap: 24px;
   margin: 120px auto;
+  flex-wrap: wrap;
 }
 
 .comments__block-left {
@@ -935,6 +922,7 @@ h3 {
 }
 .photography__wrap h2 {
   margin-bottom: 24px;
+  font-size: clamp(20px, 2.5vw, 40px);
 }
 .photography__wrap p {
   max-width: 588px;
@@ -944,7 +932,7 @@ h3 {
 }
 .photography__wrap .links {
   display: flex;
-  gap: 24px;
+  gap: clamp(5px, 2.5vw, 25px);
   padding-bottom: 40px;
 }
 
@@ -967,8 +955,10 @@ h3 {
 }
 .photography__images img {
   box-sizing: border-box;
-  width: 306px;
-  height: 420px;
+  max-width: 306px;
+  width: 100%;
+  max-height: 420px;
+  height: 100%;
 }
 
 .photography__images.active {
@@ -988,7 +978,13 @@ h3 {
     padding: 0 20px;
   }
   .photography__images {
-    max-width: 636px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  btn {
+    padding: 8px 10px;
   }
 }
 .feedback {

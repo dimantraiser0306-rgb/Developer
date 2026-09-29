@@ -18,6 +18,7 @@
     width: 100%;
         h2{
             margin-top: 120px;
+            font-size: clamp(20px, 2.5vw, 55px)
         }
         p{
             margin-bottom: 17px;
@@ -35,6 +36,7 @@
             display: flex;
             flex-direction: column;
             gap: 23px;
+            padding: 10px;
         }
 }
 

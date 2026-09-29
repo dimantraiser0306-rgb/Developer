@@ -10,16 +10,20 @@
 .work__wrap{
     display: flex;
     margin-top: 120px;
+    padding: 10px;
     gap: 24px;
     justify-content: center;
     
 }
 .work__title{
-    margin-bottom: 80px;
+    margin-bottom: clamp(0, 2.5vw, 80px);
     max-width: 572px;
     width: 100%;
     gap: 8px; 
     background-color: inherit;
+        h2{
+            font-size: clamp(22px, 2.5vw, 55px);
+        }
 }
 
 .column1,
