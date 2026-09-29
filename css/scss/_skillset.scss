@@ -73,8 +73,6 @@
     opacity: 0;
 }
 
-
-
 .skillset_footer-wrap ul{
     display: flex;
     justify-content: space-between;
@@ -85,8 +83,11 @@
                 justify-content: center;
                 max-width: 340px;
                 width: 100%;
-                // height: clamp(40px, 10svh, 140px);
+                height: clamp(40px, 10svh, 140px);
                 border: 1px solid var(--dark-purpure);
+                    img{
+                        padding: 5px;
+                    }
             }
 }
 

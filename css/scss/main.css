@@ -540,8 +540,11 @@ h3 {
   justify-content: center;
   max-width: 340px;
   width: 100%;
-  height: 140px;
+  height: clamp(40px, 10svh, 140px);
   border: 1px solid var(--dark-purpure);
+}
+.skillset_footer-wrap ul li img {
+  padding: 5px;
 }
 
 .appearFromRightText {
@@ -607,7 +610,7 @@ h3 {
 }
 
 .work__title {
-  margin-bottom: clamp(1px, 2.5vw, 80px);
+  margin-bottom: clamp(0px, 2.5vw, 80px);
   max-width: 572px;
   width: 100%;
   gap: 8px;
@@ -703,6 +706,11 @@ h3 {
   background-color: #FBE4FF;
 }
 
+a {
+  display: block;
+  padding: 10px;
+}
+
 .instagram__wrap {
   margin: 0 auto;
   display: flex;
@@ -739,7 +747,6 @@ h3 {
   display: block;
   max-width: 720px;
   width: 100%;
-  padding: 10px;
 }
 
 @media (max-width: 500px) {
@@ -750,6 +757,13 @@ h3 {
   }
   .instagram__block-left {
     box-sizing: border-box;
+  }
+  .typeAnimationText {
+    padding: 10px;
+  }
+  .intagram__block-right {
+    box-sizing: border-box;
+    padding: 20px;
   }
 }
 .dribbble {
@@ -1080,30 +1094,30 @@ h3 {
 
 .input__title {
   opacity: 0;
-  transform: translateX(-300px);
+  transform: translateX(100%);
 }
 
 .input__text {
   opacity: 0;
-  transform: translateY(400px);
+  transform: translateY(100%);
   transition: all 1s ease-in;
 }
 
 .inputName {
   opacity: 0;
-  transform: translateX(400px);
+  transform: translateX(100%);
   transition: all 1s ease;
 }
 
 .inputEmail {
   opacity: 0;
-  transform: translateX(400px);
+  transform: translateX(100%);
   transition: all 1s ease;
 }
 
 .inputMessage {
   opacity: 0;
-  transform: translateX(400px);
+  transform: translateX(100%);
   transition: all 1s ease;
 }
 
@@ -1133,6 +1147,7 @@ h3 {
 @media (max-width: 1000px) {
   .input__group {
     max-width: 332px;
+    width: 100%;
   }
 }
 @media (max-width: 575px) {

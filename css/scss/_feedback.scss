@@ -52,6 +52,7 @@
     outline: none;
     width: 100%;
     height: 50px;
+    
     font-size: 18px;
     color: #fff;
 }
@@ -94,29 +95,29 @@
 
 .input__title{
     opacity: 0;
-    transform: translateX(-300px);
+    transform: translateX(100%);
 }
 
 .input__text{
     opacity: 0;
-    transform: translateY(400px);
+    transform: translateY(100%);
     transition: all 1s ease-in;
 }
 
 .inputName{
     opacity: 0;
-    transform: translateX(400px);
+    transform: translateX(100%);
     transition: all 1s ease;
 
 }
 .inputEmail{
     opacity: 0;
-    transform: translateX(400px);
+    transform: translateX(100%);
     transition: all 1s ease;
 }
 .inputMessage{
     opacity: 0;
-    transform: translateX(400px);
+    transform: translateX(100%);
     transition: all 1s ease;
 
 }
@@ -149,6 +150,7 @@
 @media(max-width: 1000px){
     .input__group{
         max-width: 332px;
+        width: 100%;
     }
 }
 
