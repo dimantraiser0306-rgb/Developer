@@ -436,11 +436,13 @@ h3 {
 }
 
 .philosophy_block2 {
-  display: flex;
+  box-sizing: border-box;
+  display: block;
   flex-basis: 50%;
   max-width: 600px;
   width: 100%;
   background-repeat: no-repeat;
+  height: 100%;
 }
 .philosophy_block2 img {
   max-width: 600px;
