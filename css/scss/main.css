@@ -450,9 +450,13 @@ h3 {
 @media (max-width: 400px) {
   .philosophy_blocks {
     flex-direction: column;
+    box-sizing: border-box;
   }
   .philosophy_block1 {
     margin: 0;
+  }
+  .philosophy_block2 {
+    padding: 10px;
   }
 }
 .skillset {
@@ -927,7 +931,7 @@ a {
 }
 
 .photography__wrap {
-  margin: 120px auto;
+  margin: clamp(20px, 10vh, 120px) auto;
   max-width: 1296px;
   width: 100%;
   display: flex;

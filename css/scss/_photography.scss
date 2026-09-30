@@ -9,7 +9,7 @@
 }
 
 .photography__wrap {
-    margin: 120px auto;
+    margin: clamp(20px, 10vh, 120px) auto;
     max-width: 1296px;
     width: 100%;
     display: flex;
