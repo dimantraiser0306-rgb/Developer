@@ -37,7 +37,6 @@
    opacity: 0;
    transition: opacity 1s ease-in-out, ; 
         dt{
-            font-size: clamp(3.438rem, calc(2rem + 4vw), 7.313rem);
             color: var(--light-gray);
             
         }
@@ -71,12 +70,5 @@
         padding: 0 20px;
     }
 }
-@media(max-width: 500px){
-    .companies__worked-for{
-    flex-wrap: wrap;
-    gap: 5px;
-    }
-}
-
 
 
