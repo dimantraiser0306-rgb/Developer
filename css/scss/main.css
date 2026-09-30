@@ -443,12 +443,15 @@ h3 {
   width: 100%;
   background-repeat: no-repeat;
   height: 335px;
+  overflow: hidden;
 }
 .philosophy_block2 img {
-  max-width: 600px;
+  width: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 @media (max-width: 400px) {
