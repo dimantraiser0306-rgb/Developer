@@ -15,7 +15,7 @@ document.querySelectorAll(".links .btn").forEach((button) => {
     document.querySelector(".links .btn.colored")?.classList.remove("colored");
     button.classList.add("colored");
 
-    // ---- Блок 2: Переключение картинок ----
+    // ---- Блок 2: пеключение картинок ----
     // Получаем имя класса из текста кнопки (например, "ITALY" -> "italy")
     const targetClass = button.textContent.trim().toLowerCase();
     const targetGallery = document.querySelector(
@@ -117,7 +117,10 @@ const btnInput = document.querySelectorAll(".input__group-btn");
 
 const observeInputs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("inputShow", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("inputShow", entry.isIntersecting);
+      observeInputs.unobserve(entry.target);
+    }
   });
 }, {});
 for (const i of [...inputName, ...inputEmail, ...inputMessage]) {
@@ -126,7 +129,10 @@ for (const i of [...inputName, ...inputEmail, ...inputMessage]) {
 // анимация кнопки
 const observeBtn = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("showBtn", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("showBtn", entry.isIntersecting);
+      observeBtn.unobserve(entry.target);
+    }
   });
 }, {});
 for (const i of [...btnInput]) {
@@ -138,7 +144,10 @@ for (const i of [...btnInput]) {
 const inputTitle = document.querySelectorAll(".input__title");
 const inputTitleObserve = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("showTextFromLeft", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("showTextFromLeft", entry.isIntersecting);
+      inputTitleObserve.unobserve(entry.target);
+    }
   });
 }, {});
 for (const i of [...inputTitle]) {
@@ -148,7 +157,10 @@ for (const i of [...inputTitle]) {
 const inputText = document.querySelectorAll(".input__text");
 const inputTextObserve = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("input__text-show", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("input__text-show", entry.isIntersecting);
+      inputTextObserve.unobserve(entry.target);
+    }
   });
 }, {});
 

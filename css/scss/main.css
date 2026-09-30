@@ -366,8 +366,8 @@ h3 {
   transition: opacity 1s ease-in-out;
 }
 .companies__worked-for dt {
-  font-size: 117px;
   color: var(--light-gray);
+  font-size: 117px;
 }
 .companies__worked-for dd {
   font-size: 24px;
@@ -399,6 +399,14 @@ h3 {
 @media (max-width: 1200px) {
   .main {
     padding: 0 20px;
+  }
+}
+@media (max-width: 500px) {
+  .companies__worked-for {
+    gap: 15px;
+  }
+  .companies__worked-for dt {
+    font-size: 55px;
   }
 }
 .philosophy {
@@ -459,6 +467,12 @@ h3 {
   height: 100%;
 }
 
+@media (max-width: 1000px) {
+  .philosophy_blocks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media (max-width: 400px) {
   .philosophy_blocks {
     flex-direction: column;
@@ -1109,7 +1123,7 @@ a {
 
 .input__title {
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 
 .input__text {
@@ -1170,6 +1184,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .input {
+    width: 300px;
   }
 }
 .footer {

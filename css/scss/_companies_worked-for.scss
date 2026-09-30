@@ -38,7 +38,7 @@
    transition: opacity 1s ease-in-out, ; 
         dt{
             color: var(--light-gray);
-            
+            font-size: 117px;
         }
         dd{
             font-size: 24px;
@@ -68,6 +68,15 @@
 @media(max-width: 1200px){
     .main{
         padding: 0 20px;
+    }
+}
+
+@media(max-width: 500px){
+    .companies__worked-for {
+        gap: 15px;
+        dt{
+            font-size: 55px;
+        }
     }
 }
 

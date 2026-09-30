@@ -95,7 +95,7 @@
 
 .input__title{
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 
 .input__text{
@@ -159,5 +159,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .input{
+        width: 300px;
     }
 }

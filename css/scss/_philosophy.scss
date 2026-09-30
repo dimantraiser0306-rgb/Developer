@@ -54,6 +54,13 @@
     height: 100%;
 }
 
+@media(max-width: 1000px){
+    .philosophy_blocks{
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+}
+
 @media(max-width: 400px){
     .philosophy_blocks{
         flex-direction: column; 
