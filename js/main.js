@@ -42,6 +42,13 @@ btn.addEventListener("click", function () {
   overlay.classList.toggle("overlay_turnOn");
 });
 
+// разработака overlay
+overlay.addEventListener("click", () => {
+  console.log("click");
+  turnOn.classList.remove("turn_on");
+  overlay.classList.remove("overlay_turnOn");
+});
+
 const object = document.querySelectorAll(".hidden__left");
 const dlWorkFor = document.querySelectorAll(".companies__worked-for");
 const title = document.querySelectorAll(".title");
