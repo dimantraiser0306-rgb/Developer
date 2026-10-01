@@ -59,7 +59,10 @@ const appearFromRightText = document.querySelectorAll(".appearFromRightText");
 // это главный блок для анимации появления элеменов. в него добавляются новые элементы
 const observe = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("show", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+      observe.unobserve(entry.target);
+    }
   });
 }, {});
 for (const i of [
@@ -177,7 +180,10 @@ console.log(typeof skillsetBlock1);
 
 const skillsetObserve = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    entry.target.classList.toggle("skillsetShow", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("skillsetShow", entry.isIntersecting);
+      skillsetObserve.unobserve(entry.target);
+    }
   });
 }, {});
 for (const i of [...skillsetBlock1, ...skillsetBlock3]) {

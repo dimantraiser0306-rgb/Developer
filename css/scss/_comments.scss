@@ -86,3 +86,16 @@
         gap: 50px;
     }
 }
+@media(max-width: 765px){
+    .comments__blocks {
+    display: flex;
+    gap: 0;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    }
+    .comments__info-wrap{
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
