@@ -237,6 +237,14 @@ h3 {
   transition: all 1s ease-out;
   transform: translateX(100%);
 }
+.hidden__left h2 {
+  font-size: 54px;
+}
+.hidden__left h2 span {
+  font-size: 100px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(94, 94, 226);
+}
 
 .show {
   transform: translate(0);
